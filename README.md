@@ -6,7 +6,7 @@ Using the original image directly on a Raspberry Pi didn't work for me, so I did
 - Changed parent image from alpine:3.3 to alpine:latest
 - Rebuild the image using this updated Dockerfile directly on a Raspberry Pi
 
-Here follows the original documentation from https://github.com/futurevision/docker-aws-s3-sync
+Here follows the original documentation from https://github.com/futurevision/docker-aws-s3-sync, with the only change that it refers to my image:
 
 # futurevision/aws-s3-sync
 
@@ -14,7 +14,7 @@ Docker container that periodically syncs a folder to Amazon S3 using the [AWS Co
 
 ## Usage
 
-    docker run -d [OPTIONS] futurevision/aws-s3-sync
+    docker run -d [OPTIONS] jgivoni/rpi-aws-s3-sync
 
 
 ### Required Parameters:
@@ -44,7 +44,7 @@ Sync every hour with cron schedule (container keeps running):
         -e CRON_SCHEDULE="0 * * * *" \
 		-e BUCKET_PATH=/path \
         -v /home/user/data:/data:ro \
-        futurevision/aws-s3-sync
+        jgivoni/rpi-aws-s3-sync
 
 Sync just once (container is deleted afterwards):
 
@@ -54,7 +54,7 @@ Sync just once (container is deleted afterwards):
 		-e REGION=region \
         -e BUCKET=mybucket \
         -v /home/user/data:/data:ro \
-        futurevision/aws-s3-sync now
+        jgivoni/rpi-aws-s3-sync now
 
 ## Credits
 
