@@ -1,6 +1,12 @@
-[![](https://images.microbadger.com/badges/image/futurevision/aws-s3-sync.svg)](https://microbadger.com/images/futurevision/aws-s3-sync "Get your own image badge on microbadger.com")
-[![](https://images.microbadger.com/badges/version/futurevision/aws-s3-sync.svg)](https://microbadger.com/images/futurevision/aws-s3-sync "Get your own version badge on microbadger.com")
+# jgivoni/rpi-aws-s3-sync
 
+This is my Raspberry Pi enabled fork of futurevision/aws-s3-sync.
+Using the original image directly on a Raspberry Pi didn't work for me, so I did the following changes:
+
+- Changed parent image from alpine:3.3 to alpine:latest
+- Rebuild the image using this updated Dockerfile directly on a Raspberry Pi
+
+Here follows the original documentation from https://github.com/futurevision/docker-aws-s3-sync
 
 # futurevision/aws-s3-sync
 
